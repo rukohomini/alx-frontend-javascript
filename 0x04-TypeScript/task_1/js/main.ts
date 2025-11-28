@@ -1,4 +1,4 @@
-// Task 1: Teacher interface
+
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -7,13 +7,11 @@ interface Teacher {
   yearsOfExperience?: number;
   [key: string]: any;
 }
-
-// Task 2: Directors interface extending Teacher
 interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-// Example object for Directors
+
 const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
