@@ -1,12 +1,19 @@
+// Teacher interface definition
 interface Teacher {
-  readonly firstName: string;
-  readonly lastName: string;
-  fullTimeEmployee: boolean;
-  location: string;
-  yearsOfExperience?: number;
-  [key: string]: any;
+  readonly firstName: string;       // readonly: only set at initialization
+  readonly lastName: string;        // readonly: only set at initialization
+  fullTimeEmployee: boolean;        // mandatory
+  location: string;                 // mandatory
+  yearsOfExperience?: number;       // optional
+  [key: string]: any;               // allow any other properties
 }
 
+// Directors interface extending Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;          // required for Directors
+}
+
+// Existing Teacher objects
 const teacher1: Teacher = {
   firstName: 'John',
   lastName: 'Doe',
@@ -32,6 +39,17 @@ const teacher3: Teacher = {
   contract: false
 };
 
+// New Director object
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17
+};
+
+// Log objects to console
 console.log(teacher1);
 console.log(teacher2);
 console.log(teacher3);
+console.log(director1);
