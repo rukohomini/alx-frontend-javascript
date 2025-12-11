@@ -7,12 +7,31 @@ interface Teacher {
   [key: string]: any;
 }
 
-const teacher3: Teacher = {
+const teacher1: Teacher = {
   firstName: 'John',
-  fullTimeEmployee: false,
   lastName: 'Doe',
-  location: 'London',
-  contract: false,
+  fullTimeEmployee: true,
+  location: 'New York',
+  yearsOfExperience: 5,
+  contract: false
 };
 
+const teacher2: Teacher = {
+  firstName: 'Jane',
+  lastName: 'Smith',
+  fullTimeEmployee: false,
+  location: 'Paris',
+  subject: 'Math'
+};
+
+const teacher3: Teacher = {
+  firstName: 'John',
+  lastName: 'Doe',
+  fullTimeEmployee: false,
+  location: 'London',
+  contract: false
+};
+
+console.log(teacher1);
+console.log(teacher2);
 console.log(teacher3);
